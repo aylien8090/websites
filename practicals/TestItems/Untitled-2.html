@@ -1,0 +1,42 @@
+<!-- Your existing code... -->
+<head>
+    <title>HTML5 Minimal Template</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KarateKids Registration</title>
+    <script src="../javascript/formValidation.js"></script>
+</head>
+
+<Fieldset>
+    <legend>Gi Purchase</legend>
+    <!-- Choose whether to buy merch -->
+    <label for="buyGI">Do you want to buy merch?</label>
+    <select id="buyGI" name="buyGI" required>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+
+    <!-- If yes, choose shirt size -->
+    <div id="GISize">
+        <label for="GISizeSelect">Choose Shirt Size:</label>
+        <select id="GISizeSelect" name="GISize">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+        </select>
+    </div>
+</Fieldset>
+
+Existing code...
+
+<!-- <script>
+    // JavaScript to show/hide the shirt size dropdown based on the selection
+    document.getElementById('buyGI').addEventListener('change', function() {
+        var shirtSizeDiv = document.getElementById('GISize');
+        if (this.value === 'yes') {
+            shirtSizeDiv.style.display = 'block';
+        } else {
+            shirtSizeDiv.style.display = 'none';
+        }
+    });
+</script> -->

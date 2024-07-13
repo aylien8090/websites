@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KarateKids Registration</title>
+    <style>
+        .form-section {
+            display: none;
+        }
+
+        .form-section:target {
+            display: block;
+        }
+
+        /* Additional styling to hide "Next" links when a section is visible */
+        .form-section:target + a {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Your header content goes here -->
+    </header>
+
+    <main>
+        <!-- First part of the form -->
+        <form action="https://twasum.cdms.westernsydney.edu.au/twainfo/echo.php" method="post">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="clubName">Club Name:</label>
+            <input type="text" id="clubName" name="clubName" required>
+
+            <label for="clubNumber">Club #:</label>
+            <input type="text" id="clubNumber" name="clubNumber" required>
+
+            <label for="postAddress">Post Address:</label>
+            <input type="text" id="postAddress" name="postAddress" required>
+
+            <label for="contactName">Contact Name:</label>
+            <input type="text" id="contactName" name="contactName" required>
+
+            <label for="phone">Phone:</label>
+            <input type="number" id="phone" name="phone" required>
+
+            <a href="#childrenSection">Next</a>
+        </form>
+
+        <!-- Second part of the form initially hidden -->
+        <div class="form-section" id="childrenSection">
+            <!-- Child 1 -->
+            <label for="child1FirstName">Child 1 First Name:</label>
+            <input type="text" id="child1FirstName" name="child1FirstName" required>
+
+            <label for="child1LastName">Child 1 Last Name:</label>
+            <input type="text" id="child1LastName" name="child1LastName" required>
+
+            <!-- Choose Membership for Child 1 -->
+            <label for="child1Membership">Choose Membership for Child 1:</label>
+            <select id="child1Membership" name="child1Membership" required>
+                <option value="3m">3 months ($220)</option>
+                <option value="6m">6 months ($400)</option>
+                <option value="12m">12 months ($700)</option>
+            </select>
+
+            <a href="#confirmationSection">Next</a>
+        </div>
+
+        <!-- Third part of the form initially hidden -->
+        <div class="form-section" id="confirmationSection">
+            <!-- Additional form fields for confirmation or summary -->
+
+            <button type="submit">Submit</button>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Your footer content goes here -->
+    </footer>
+</body>
+</html>

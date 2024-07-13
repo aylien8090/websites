@@ -1,0 +1,4 @@
+.AAnames {
+    font-size: 24px; /* You can adjust the size as needed */
+    /* Additional styling properties if necessary */
+}

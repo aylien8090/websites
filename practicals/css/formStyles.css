@@ -1,0 +1,367 @@
+footer {
+    font-family: 'Times New Roman', serif;
+    text-align: center; /* Center-align the text */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    color: #fff;
+}
+
+header {
+    background-color: #3498db; /* Header background color */
+    color: #fff; /* Header text color */
+    padding: 20px; /* Padding around the header content */
+    text-align: center; /* Center-align the text */
+    font-size: 24px; /* Font size of the header text */
+    font-weight: bold; /* Make the text bold */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Add some letter spacing for better readability */
+    border-bottom: 2px solid #2980b9; /* Add a bottom border for separation */
+}
+
+#ChildMoneyStyle {
+    font-size: x-large;
+    font-style: normal;
+    font-family: 'Times New Roman', serif;
+    text-align: center; /* Center-align the text */
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a  shadow */
+}
+
+select {
+    width: 100%;
+}
+
+#childRegistrationTable {
+    margin: 20px auto; /* Center the table horizontally with some margin */
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+    width: 80%;
+}
+
+#childRegistrationTable th, #childRegistrationTable td {
+    border: 1px solid #3da8ff; /* Add borders to table cells */
+    padding: 10px; /* Add padding to table cells */
+    text-align: left;
+}
+
+#childRegistrationTable th {
+    background-color: #3498db; /* Header background color */
+    color: #fff; /* Header text color */
+    
+}
+
+#TotalMoneyStyle {
+    font-size: x-large;
+    font-style: normal;
+    font-family: 'Times New Roman', serif; 
+    text-align: center; /* Center-align the text */
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a  shadow */
+}
+
+#invoiceTable {
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a  shadow */
+    margin-left: 30%;
+    margin-bottom: 10px;
+}
+
+#updateTotal, #Shipping, #GST, #grandTotal {
+    background-color: white;
+}
+
+#invoiceTable th, #invoiceTable td{
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#invoiceTable th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+body {
+    background-color: #07b0ff; /* Set a background color for the entire page */
+    font-family: Arial, sans-serif; /* Set a common font family for better readability */
+    margin: 0;
+}
+
+
+#giPrices h2 {
+    color: #333; /* Set header text color */
+    margin-top: 0%; /* Add a small top margin */
+    margin-bottom: 5px;
+}
+
+#giPrices p {
+    margin: 5px 0; /* Adjust margin between paragraphs */
+    color: #666; /* Set paragraph text color */
+}
+
+input {
+    width: 100%;
+    text-align: center;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    width: auto;
+    /* display: inline-block; */
+    text-align: center;
+}
+
+label,
+input,
+select {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.box {
+    margin-top: 60px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.731); /* Add a  shadow */
+    border-radius: 10px; /* Add rounded corners for a softer look */
+    background-color: #b6e8ff;
+    align-items: center;
+    justify-content: center;
+}
+
+#outerbox {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#address {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+    width: 50%;
+    /* Make it span the half width of the page */
+    display: block;
+    /* Ensure it is displayed as a block element */
+    margin-bottom: 20px;
+}
+
+#PersonalDetails {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+    width: 50%;
+    /* Make it span the half width of the page */
+    display: block;
+    /* Ensure it is displayed as a block element */
+}
+
+
+form {
+    margin: 0 auto;
+}
+
+button {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px; /* Adjust padding for size */
+    font-size: 16px; /* Adjust font size */
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    cursor: pointer;
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #2980b9; /* Change background color on hover */
+}
+
+#giPrices {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    margin: auto;
+    border: 2px solid #333;
+    width: fit-content;
+    background-color: #f4f4f4;
+    border-radius: 10px; /* Add rounded corners for a softer look */
+}
+
+#memPrices h2 {
+    color: #333; /* Set header text color */
+    margin-top: 0%;
+    margin-bottom: 5px;
+}
+
+#memPrices p {
+    margin: 5px 0; /* Adjust margin between paragraphs */
+    color: #666; /* Set paragraph text color */
+}
+
+#memPrices {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    margin: auto;
+    border: 2px solid #333;
+    width: fit-content;
+    background-color: #f4f4f4; 
+    border-radius: 10px; /* Add rounded corners for a softer look */
+}
+
+#PaymentMethod {
+    all: initial; /* Reset all styles to their initial values */
+    display: inline-block;
+    flex-direction: column;
+}
+
+#PaymentMethod input[type="radio"] {
+    margin-bottom: 5px;
+}
+
+#PaymentMethod {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+    width: 50%;
+    display: block;
+    text-align: center;
+}
+
+#PaymentMethod > legend {
+    font-size: xx-large;
+    font-family: 'Times New Roman', serif;
+}
+
+#PaymentMethod div {
+    border: 2px solid #ccc;
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#DeliveryMethod {
+    all: initial; /* Reset all styles to their initial values */
+    display: inline-block;
+    flex-direction: column;
+}
+
+#DeliveryMethod input[type="radio"] {
+    margin-bottom: 5px;
+}
+
+
+
+#DeliveryMethod {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 50%;
+    display: block;
+    text-align: center;
+}
+
+#DeliveryMethod > legend {
+    font-size: xx-large;
+    font-family: 'Times New Roman', serif;
+}
+
+#DeliveryMethod div {
+    border: 2px solid #ccc; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#centerbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media only screen and (min-width: 769px) {
+    
+    fieldset {
+        display: inline-block;
+        margin-left: 0;
+    }
+
+    #TotalMoneyStyle {
+        font-size: x-large;
+        font-style: normal;
+        font-family: 'Times New Roman', serif;
+        text-align: center;
+        /* Make it also hover */
+        position: fixed;
+        bottom: 220px;
+        right: 67px;
+        background-color: #f9f9f9; /* Background color for the invoice table */
+        border: 1px solid #ddd;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    }
+    
+    #invoiceTable {
+        position: fixed;
+        bottom: 10px;
+        right: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    }
+    
+    #invoiceTable th, #invoiceTable td{
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    #invoiceTable th {
+        background-color: #3498db;
+        color: #fff;
+    }
+
+    #centerbox fieldset {
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #updateTotal, #Shipping, #GST, #grandTotal {
+        background-color: #ddd;
+    }
+
+} 
+

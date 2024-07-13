@@ -1,0 +1,28 @@
+body {
+    margin:0;
+    padding:0;
+    font-family: Arial;
+    font-size:1em;
+    background-color:#ffffff;
+    color:#000000;
+}
+
+form {
+    margin:20px;
+}
+
+input[type="text"], select {
+    width:250px;
+    padding:3px;
+    font-size:1em;
+}
+
+input[type="submit"] {
+    padding:3px;
+    font-size:1em;
+}
+
+label {
+    display:inline-block;
+    width:150px;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WAASAAS Frequent Flier Survey - Speak your Brains!</title>
+    <link href="styles.css" rel="stylesheet">
+    <script>
+
+        function CheckForm(form) {
+            let isvaild = true
+            
+            let pattern = /\(02\)\d{8}/;
+
+            let phonenumber = document.getElementById('phone').value;
+            let phonecheck = pattern.test(phonenumber);
+
+            let error = document.getElementById('phoneerror');
+
+            if (phonecheck) {
+                error.innerHTML = ""
+            } else {
+                error.innerHTML = "Wrong input"
+                isvaild = false
+            }
+
+            let favdest = document.getElementById('dest').value;
+
+            let patterndest = /\w+/g
+            let destcheck = patterndest.test(favdest);
+
+            let favdesterror = document.getElementById('favdesterror');
+            if (destcheck) {
+                favdesterror.innerHTML = ""
+                
+            } else {
+                favdesterror.innerHTML = "Enter Fav dest"
+                isvaild = false
+            }
+
+            let mealpattern = /\w+/g
+            let meal = document.getElementById('meal').value;
+            let mealcheck = mealpattern.test(meal);
+
+            let mealerror = document.getElementById('mealerror');
+
+            if (mealcheck) {
+                mealerror.innerHTML = ""
+            } else {
+                mealerror.innerHTML = "Enter meal plsssss"
+                isvalid = false
+            }
+
+            return isvaild
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1> WAASAAS Frequent Flier Survey</h1>
+    <form id="Q3form" method="get" action="http://tl28serv.uws.edu.au/twainfo/form.asp"
+        onsubmit="return CheckForm(this)">
+
+        <fieldset>
+            <legend> About You </legend>
+            <p>
+                <label for="first">First Name:</label>
+                <input type="text" id="first" name="first">
+                <label for="last">Family Name:</label>
+                <input type="text" id="last" name="last">
+            </p>
+            <p>
+                <label for="ffno">WAASAAS Frequent Flier Number:</label>
+                <input type="text" id="ffno" name="ffno" placeholder="#########">
+            </p>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend> Your Contact Details </legend>
+            <p>
+                <label for="email">Email address:</label>
+                <input type="text" id="email" name="email" placeholder="username@domainname">
+                <label for="phone">Home Phone:</label>
+                <input type="text" id="phone" name="phone" placeholder="(##)########">
+            </p>
+
+            <div id="phoneerror"></div>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend> Your Flying Preferences </legend>
+            <p>
+                <label for="dest">Favourite Destination:</label>
+                <input type="text" id="dest" name="dest">
+                <div id="favdesterror"></div>
+            </p>
+
+            <label for="meal">Preferred meal:</label>
+            <select id="meal" name="meal" size="1">
+                <option value=""> -- </option>
+                <option value="std"> Standard </option>
+                <option value="veg"> Vegetarian </option>
+                <option value="vegan"> Vegan </option>
+                <option value="gf"> Gluten-free </option>
+                <option value="fruit"> Fruitarian </option>
+                <option value="meat"> Meat-lover's - no vegetables </option>
+                <option value="vegemite"> Vegemite sandwich </option>
+            </select>
+            <div id=mealerror></div>
+            <br>
+
+            <p>What do you like to do during flights?<br>
+                <input type="checkbox" id="chbx1" name="inflight" value="snore"><label for="chbx1">Snore
+                    loudly</label><br>
+                <input type="checkbox" id="chbx2" name="inflight" value="eat"><label for="chbx2">Eat messily</label><br>
+                <input type="checkbox" id="chbx3" name="inflight" value="talk"><label for="chbx3">Talk to the person
+                    next to you</label><br>
+                <input type="checkbox" id="chbx4" name="inflight" value="whinge"><label for="chbx4">Complain to the
+                    cabin crew</label><br>
+                <input type="checkbox" id="chbx5" name="inflight" value="sleep"><label for="chbx5">Sleep in the
+                    aisle</label><br>
+            </p>
+
+            <p>What's your favorite thing about our airline?<br>
+                <input type="radio" id="rad1" name="fav" value="drinks"><label for="rad1"> We charge for drinks</label>
+                <br>
+                <input type="radio" id="rad2" name="fav" value="hosties"><label for="rad2"> Our flight attendants'open
+                    hostility</label><br>
+                <input type="radio" id="rad3" name="fav" value="movies"><label for="rad3"> Our awesome selection of 70s
+                    disaster movies</label><br>
+                <input type="radio" id="rad4" name="fav" value="jingle"><label for="rad4"> The song from our
+                    adverts</label><br>
+            </p>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend> Survey Submission </legend>
+            <input type="submit" value="Tell us what you think!">
+            <input type="reset" value="Clear Form">
+        </fieldset>
+
+    </form>
+</body>
+
+</html>

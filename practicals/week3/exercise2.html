@@ -1,0 +1,443 @@
+<!-- 
+Name: Ayad Siddiqui 
+Student ID: 22029605 
+Tutorial Time: 12pm - 2pm
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KarateKids Registration</title>
+    <link rel="stylesheet" href="../css/formStyles.css">
+    <script src="../javascript/formValidation.js" defer></script>
+</head>
+
+<body>
+    <header>
+        KarateKids Registration
+    </header>
+
+    <main id="outerbox">
+        <div class="box">
+            <form name="formId" action="https://twasum.cdms.westernsydney.edu.au/twainfo/echo.php" method="post">
+                <fieldset id="PersonalDetails">
+                    <legend>Personal Details:</legend>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required
+                        oninvalid="this.setCustomValidity('Please enter a Date')" oninput="this.setCustomValidity('')">
+
+                    <label for="ClubName">Club Name:</label>
+                    <input type="text" id="ClubName" name="ClubName" required
+                        oninvalid="this.setCustomValidity('Please enter Club Name')"
+                        oninput="this.setCustomValidity('')" placeholder="Enter Club Name">
+
+                    <label for="Club#">Club #:</label>
+                    <input type="text" id="Club#" name="Club#" required
+                        oninvalid="this.setCustomValidity('Please enter K###')" oninput="this.setCustomValidity('')"
+                        placeholder="K###">
+
+                    <label for="ContactName">Contact Name:</label>
+                    <input type="text" id="ContactName" name="ContactName" required
+                        oninvalid="this.setCustomValidity('Please enter Contact Name')"
+                        oninput="this.setCustomValidity('')" placeholder="Enter Contact Name">
+
+                    <label for="Phone">Phone:</label>
+                    <input type="text" id="Phone" name="Phone" required
+                        oninvalid="this.setCustomValidity('Please enter Phone Number')"
+                        oninput="this.setCustomValidity('')" placeholder="Enter Phone Number">
+                </fieldset>
+                <br>
+                <fieldset id="address">
+                    <label for="addressLine1">Address Line 1</label>
+                    <input type="text" id="addressLine1" name="addressLine1" required
+                        oninvalid="this.setCustomValidity('Please enter Address Line 1')"
+                        oninput="this.setCustomValidity('')" placeholder="Address Line 1">
+
+                    <label for="addressLine2">Address Line 2</label>
+                    <input type="text" id="addressLine2" name="addressLine2" placeholder="Address Line 2">
+
+                    <label for="city">City or Suburb</label>
+                    <input type="text" id="city" name="city" required
+                        oninvalid="this.setCustomValidity('Please enter City or Suburb')"
+                        oninput="this.setCustomValidity('')" placeholder="Enter Post City or Suburb">
+
+                    <label for="state">state</label>
+                    <select name="state" id="state" onchange="amount1(); this.setCustomValidity('');" required
+                        oninvalid="this.setCustomValidity('Please enter valid State')"
+                        oninput="this.setCustomValidity('')">
+                        <option value="">N/A</option>
+                        <option value="NSW">NSW</option>
+                        <option value="QLD">QLD</option>
+                        <option value="NT">NT</option>
+                        <option value="ACT">ACT</option>
+                        <option value="SA">SA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="VIC">VIC</option>
+                        <option value="WA">WA</option>
+                        </select>
+
+                        <label for="PostAddress">Post Code</label>
+                        <input type="text" id="PostAddress" name="PostAddress" required
+                            oninvalid="this.setCustomValidity('Please enter Code')"
+                            oninput="this.setCustomValidity('')" placeholder="Enter Post Code">
+                </fieldset>
+                <div id="memPrices">
+                    <h2>Membership Prices:</h2>
+                    <p>3 months - $220</p>
+                    <p>6 months - $600</p>
+                    <p>12 months - $700</p>
+                </div>
+                <br>
+                <fieldset>
+                    <legend>Child 1 Details</legend>
+
+                    <input type="checkbox" id="includeChild1" onclick="toggleChildFields('1', this.checked)" required>
+                    <label for="includeChild1">Include Child 1</label>
+
+                    <div id="child1Fields" style="display: none;">
+                        <label for="child1FirstName">Child 1 First Name</label>
+                        <input type="text" id="child1FirstName" name="child1FirstName" required
+                            oninvalid="this.setCustomValidity('Please enter First Name')"
+                            oninput="this.setCustomValidity('')" placeholder="First Name">
+
+                        <label for="child1LastName">Child 1 Last Name</label>
+                        <input type="text" id="child1LastName" name="child1LastName" required
+                            oninvalid="this.setCustomValidity('Please enter Last Name')"
+                            oninput="this.setCustomValidity('')" placeholder="Last Name">
+
+
+                        <!-- Choose Membership for Child 1-->
+                        <label for="child1Membership">Choose Membership for Child 1</label>
+                        <select name="child1Membership" id="child1Membership"
+                            onchange="amount1(); this.setCustomValidity('');" required>
+                            <option value="" disabled>Please Select Membership Length</option>
+                            <option value="0">N/A</option>
+                            <option value="220 Three month">3 months ($220)</option>
+                            <option value="400 Six months">6 months ($400)</option>
+                            <option value="700 Twelve months">12 months ($700)</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Child 2 Details</legend>
+
+                    <!-- Checkbox to enable/disable Child 2 fields -->
+                    <input type="checkbox" id="includeChild2" onclick="toggleChildFields('2', this.checked)">
+                    <label for="includeChild2">Include Child 2</label>
+
+                    <!-- Child 2 fields (initially disabled) -->
+                    <div id="child2Fields" style="display: none;">
+                        <label for="child2FirstName">Child 2 First Name</label>
+                        <input type="text" id="child2FirstName" name="child2FirstName"
+                            oninvalid="this.setCustomValidity('Please enter First Name')"
+                            oninput="this.setCustomValidity('')" placeholder="Last Name">
+
+                        <label for="child2LastName">Child 2 Last Name:</label>
+                        <input type="text" id="child2LastName" name="child2LastName"
+                            oninvalid="this.setCustomValidity('Please enter Last Name')"
+                            oninput="this.setCustomValidity('')" placeholder="Last Name">
+
+                        <!-- Choose Membership for Child 2-->
+                        <label for="child2Membership">Choose Membership for Child 2</label>
+                        <select name="child2Membership" id="child2Membership"
+                            onchange="amount2(); this.setCustomValidity('');" required>
+                            <option value="" disabled>Please Select Membership Length</option>
+                            <option value="0">N/A</option>
+                            <option value="220 Three month">3 months ($220)</option>
+                            <option value="400 Six months">6 months ($400)</option>
+                            <option value="700 Twelve months">12 months ($700)</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Child 3 Details</legend>
+
+                    <!-- Checkbox to enable/disable Child 3 fields -->
+                    <input type="checkbox" id="includeChild3" onclick="toggleChildFields('3', this.checked)">
+                    <label for="includeChild3">Include Child 3</label>
+
+                    <!-- Child 3 fields (initially disabled) -->
+                    <div id="child3Fields" style="display: none;">
+                        <label for="child3FirstName">Child 3 First Name</label>
+                        <input type="text" id="child3FirstName" name="child3FirstName"
+                            oninvalid="this.setCustomValidity('Please enter First Name')"
+                            oninput="this.setCustomValidity('')" placeholder="Last Name">
+
+                        <label for="child3LastName">Child 3 Last Name:</label>
+                        <input type="text" id="child3LastName" name="child3LastName"
+                            oninvalid="this.setCustomValidity('Please enter Last Name')"
+                            oninput="this.setCustomValidity('')" placeholder="Last Name">
+
+                        <!-- Choose Membership for Child 3-->
+                        <label for="child3Membership">Choose Membership for Child 3</label>
+                        <select name="child3Membership" id="child3Membership"
+                            onchange="amount3(); this.setCustomValidity('');" required>
+                            <option value="" disabled>Please Select Membership Length</option>
+                            <option value="0">N/A</option>
+                            <option value="220 Three month">3 months ($220)</option>
+                            <option value="400 Six months">6 months ($400)</option>
+                            <option value="700 Twelve months">12 months ($700)</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Child 4 Details</legend>
+
+                    <!-- Checkbox to enable/disable Child 4 fields -->
+                    <input type="checkbox" id="includeChild4" onclick="toggleChildFields('4', this.checked)">
+                    <label for="includeChild4">Include Child 4</label>
+
+                    <!-- Child 4 fields (initially disabled) -->
+                    <div id="child4Fields" style="display: none;">
+                        <label for="child4FirstName">Child 4 First Name</label>
+                        <input type="text" id="child4FirstName" name="child4FirstName"
+                            oninvalid="this.setCustomValidity('Please enter First Name')"
+                            oninput="this.setCustomValidity('')" placeholder="Last Name">
+
+                        <label for="child4LastName">Child 4 Last Name:</label>
+                        <input type="text" id="child4LastName" name="child4LastName"
+                            oninvalid="this.setCustomValidity('Please enter Last Name')"
+                            oninput="this.setCustomValidity('')" placeholder="Last Name">
+
+                        <!-- Choose Membership for Child 4-->
+                        <label for="child4Membership">Choose Membership for Child 4</label>
+                        <select name="child4Membership" id="child4Membership"
+                            onchange="amount4(); this.setCustomValidity('');" required>
+                            <option value="" disabled>Please Select Membership Length</option>
+                            <option value="0">N/A</option>
+                            <option value="220 Three month">3 months ($220)</option>
+                            <option value="400 Six months">6 months ($400)</option>
+                            <option value="700 Twelve months">12 months ($700)</option>
+                        </select>
+                    </div>
+
+
+                </fieldset>
+
+                <br>
+                <div id="giPrices">
+                    <h2>GI Prices:</h2>
+                    <p>Small - $110</p>
+                    <p>Medium - $120</p>
+                    <p>Large and Extra Large - $130</p>
+                </div>
+                <br>
+                <div id="centerbox">
+                    <!-- Prices for each GI -->
+
+                    <fieldset id="giPurchase1" style="display: none;">
+                        <legend>Gi Purchase (Child 1)</legend>
+                        <!-- Choose whether to buy merch -->
+                        <label for="buyGI1">Do you want to buy GI?</label>
+                        <select id="buyGI1" name="buyGI1" onchange="updateSize(1)"
+                            oninvalid="this.setCustomValidity('Please enter valid option')"
+                            oninput="this.setCustomValidity('')">
+                            <option value="">N/A</option>
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                        <p id="giAlert1" style="color: red;"></p>
+
+                        <!-- If yes, choose shirt size -->
+                        <div id="GISize1">
+                            <label for="GISizeSelect1">Choose Shirt Size:</label>
+                            <select id="GISizeSelect1" name="GISize1" disabled onchange="amount1()" required
+                                oninvalid="this.setCustomValidity('Please enter valid option')"
+                                oninput="this.setCustomValidity('')">
+                                <option value="">N/A</option>
+                                <option value="110 SMALL">S</option>
+                                <option value="120 MEDIUM">M</option>
+                                <option value="130 LARGE">L</option>
+                                <option value="130 XL">XL</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <fieldset id="giPurchase2" style="display: none;">
+                        <legend>Gi Purchase (Child 2)</legend>
+                        <!-- Choose whether to buy merch -->
+                        <label for="buyGI2">Do you want to buy GI?</label>
+                        <select id="buyGI2" name="buyGI2" onchange="updateSize(2)"
+                            oninvalid="this.setCustomValidity('Please enter valid option')"
+                            oninput="this.setCustomValidity('')">
+                            <option value="">N/A</option>
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                        <p id="giAlert2" style="color: red;"></p>
+
+                        <!-- If yes, choose shirt size -->
+                        <div id="GISize2">
+                            <label for="GISizeSelect2">Choose Shirt Size:</label>
+                            <select id="GISizeSelect2" name="GISize2" disabled onchange="amount2()" required
+                                oninvalid="this.setCustomValidity('Please enter valid option')"
+                                oninput="this.setCustomValidity('')">
+                                <option value="">N/A</option>
+                                <option value="110 SMALL">S</option>
+                                <option value="120 MEDIUM">M</option>
+                                <option value="130 LARGE">L</option>
+                                <option value="130 XL">XL</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <fieldset id="giPurchase3" style="display: none;">
+                        <legend>Gi Purchase (Child 3)</legend>
+                        <!-- Choose whether to buy merch -->
+                        <label for="buyGI3">Do you want to buy GI?</label>
+                        <select id="buyGI3" name="buyGI3" onchange="updateSize(3)"
+                            oninvalid="this.setCustomValidity('Please enter valid option')"
+                            oninput="this.setCustomValidity('')">
+                            <option value="">N/A</option>
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                        <p id="giAlert3" style="color: red;"></p>
+
+                        <!-- If yes, choose shirt size -->
+                        <div id="GISize3">
+                            <label for="GISizeSelect3">Choose Shirt Size:</label>
+                            <select id="GISizeSelect3" name="GISize3" disabled onchange="amount3()" required
+                                oninvalid="this.setCustomValidity('Please enter valid option')"
+                                oninput="this.setCustomValidity('')">
+                                <option value="">N/A</option>
+                                <option value="110 SMALL">S</option>
+                                <option value="120 MEDIUM">M</option>
+                                <option value="130 LARGE">L</option>
+                                <option value="130 XL">XL</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <fieldset id="giPurchase4" style="display: none;">
+                        <legend>Gi Purchase (Child 4)</legend>
+                        <!-- Choose whether to buy merch -->
+                        <label for="buyGI4">Do you want to buy GI?</label>
+                        <select id="buyGI4" name="buyGI4" onchange="updateSize(4)"
+                            oninvalid="this.setCustomValidity('Please enter valid option')"
+                            oninput="this.setCustomValidity('')">
+                            <option value="">N/A</option>
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                        <p id="giAlert4" style="color: red;"></p>
+
+                        <!-- If yes, choose shirt size -->
+                        <div id="GISize4">
+                            <label for="GISizeSelect4">Choose Shirt Size:</label>
+                            <select id="GISizeSelect4" name="GISize4" disabled onchange="amount4()" required
+                                oninvalid="this.setCustomValidity('Please enter valid option')"
+                                oninput="this.setCustomValidity('')">
+                                <option value="">N/A</option>
+                                <option value="110 SMALL">S</option>
+                                <option value="120 MEDIUM">M</option>
+                                <option value="130 LARGE">L</option>
+                                <option value="130 XL">XL</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+                <br>
+                <fieldset id="PaymentMethod">
+                    <legend>Payment Method</legend>
+                    <div>
+                        <label for="Cash">Cash</label>
+                        <input type="radio" id="Cash" name="payment_method" value="Cash" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="DirectDeposit">Direct Deposit</label>
+                        <input type="radio" id="DirectDeposit" name="payment_method" value="Direct Deposit" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="CreditCard">Credit Card</label>
+                        <input type="radio" id="CreditCard" name="payment_method" value="Credit Card" required>
+                    </div>
+                </fieldset>
+
+                <fieldset id="DeliveryMethod" onchange="updateTotal()">
+                    <legend>Delivery Method</legend>
+                    <div>
+                        <label for="Pickup">Pick up</label>
+                        <input type="radio" id="Pickup" name="delivery_method" value="Cash" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="Pickup">Shipped (extra $10) - will be shipped to above address provided</label>
+                        <input type="radio" id="Shipped" name="delivery_method" value="ship" required>
+                    </div>
+                </fieldset>
+                <!-- Table for Child Registration Amounts -->
+                <h2 id="ChildMoneyStyle">Child Registration Amounts</h2>
+                <table id="childRegistrationTable">
+                    <thead>
+                        <tr>
+                            <th>Child</th>
+                            <th>Membership Amount</th>
+                            <th>GI Amount</th>
+                            <th>Total Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows for each child -->
+                        <tr id="child1Row">
+                            <td>Child 1</td>
+                            <td id="child1MembershipAmount">$0</td>
+                            <td id="child1GIAmount">$0</td>
+                            <td id="child1TotalAmount">$0</td>
+                        </tr>
+                        <tr id="child2Row">
+                            <td>Child 2</td>
+                            <td id="child2MembershipAmount">$0</td>
+                            <td id="child2GIAmount">$0</td>
+                            <td id="child2TotalAmount">$0</td>
+                        </tr>
+                        <tr id="child3Row">
+                            <td>Child 3</td>
+                            <td id="child3MembershipAmount">$0</td>
+                            <td id="child3GIAmount">$0</td>
+                            <td id="child3TotalAmount">$0</td>
+                        </tr>
+                        <tr id="child4Row">
+                            <td>Child 4</td>
+                            <td id="child4MembershipAmount">$0</td>
+                            <td id="child4GIAmount">$0</td>
+                            <td id="child4TotalAmount">$0</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <h2 id="TotalMoneyStyle">Invoice</h2>
+                <table id="invoiceTable">
+                    <tr>
+                        <th>Total</th>
+                        <td id="updateTotal">$0</td>
+                    </tr>
+                    <tr id="shippingRow">
+                        <th>Shipping</th>
+                        <td id="Shipping">$0</td>
+                    </tr>
+                    <tr>
+                        <th>GST</th>
+                        <td id="GST">$0</td>
+                    </tr>
+                    <tr>
+                        <th>Grand Total</th>
+                        <td id="grandTotal">$0</td>
+                    </tr>
+                </table>
+
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+            <br>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>KarateKids Form</p>
+    </footer>
+</body>
+</html>

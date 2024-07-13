@@ -1,0 +1,190 @@
+.AAnames {
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+.section {
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: auto;
+    margin-top: 10px;
+
+}
+
+.section1 {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.scrollable-section {
+    overflow: auto;
+    max-width: 60vw;
+    margin-bottom: 20px;
+}
+
+.scrollable-section-a {
+    overflow: auto;
+    max-width: 40vw;
+    margin-bottom: 20px;
+}
+
+.gap {
+    margin:auto;
+}
+
+span {
+    margin-top: auto;
+    vertical-align: top;
+}
+
+td {
+    vertical-align: top;
+    border-color: #333;
+    border-style: outset;
+    border-radius:0vmin;
+}
+
+html {
+    color: white;
+    background: linear-gradient(to bottom right, #333 0%, #000000 33%);
+    height: 100%;
+}
+
+nav {
+    background-color: #333;
+    overflow-x: hidden;
+    padding-top: 20px;
+    height: 85vh;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    color: white; /* Set the text color to white */
+    text-align: left; /* Align text to the left */
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold; /* Make the text bold */
+}
+
+nav a:hover {
+    background-color: #ddd; /* Change background color on hover if desired */
+    color: black; /* Change text color on hover if desired */
+}
+
+body {
+    display: flex;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+header, footer {
+    background-color: #333; /* Set the background color */
+    color: white; /* Set the text color to white */
+    text-align: center;
+    padding: 10px;
+}
+
+#top {
+    color: white;
+    font-size: 24px; /* You can adjust the font size as needed */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px; /* Add some top margin to center it vertically */
+}
+
+
+.button {
+    display: inline-block;
+    background-color: lightgrey;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black; /* Text color */
+    
+}
+
+.button:hover {
+    background-color: #45a049;
+    color: white; /* Text color */
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* New hover background color */
+    color: white; /* Text color */
+}
+
+input[type="submit"] {
+    width:  min-content; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+    border-radius: 5px;
+}
+
+.welcome-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px; /* adjust spacing between sections */
+}
+
+.welcome-section-last {
+    margin-top: 0%;
+}
+
+.content {
+    flex: 1;
+    padding: 0 20px; /* adjust content padding */
+}
+
+.image {
+    flex: 1;
+    text-align: center; /* center image horizontally */
+}
+
+.image img {
+    max-width: 500px; /* adjust maximum width of the image */
+    height: auto;
+}
+
+.left {
+    order: 1; /* reorder for left-aligned content */
+}
+
+.right {
+    order: 2; /* reorder for right-aligned content */
+}
+
+@media (max-width: 768px) {
+    .welcome-section {
+        flex-direction: column;
+    }
+
+    .content,
+    .image {
+        order: initial;
+        text-align: center;
+    }
+}
+
+@media (min-height: 100%) {
+    html {
+        height: max-content;
+    }
+}
